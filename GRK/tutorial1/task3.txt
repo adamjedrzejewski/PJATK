@@ -1,0 +1,28 @@
+<script src="//cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/p5.js"></script>
+<script>
+function setup() {
+createCanvas(800,600);
+noLoop();
+
+}
+function draw() {  //noprotect
+	background(0);
+    // if x = 0, grey shade = 0
+	// if x = 799, grey shade = 255
+	for(y=0; y<height; y++) {
+		for(x=0; x<width; x++) {
+        	const dist = dist_to_gradient(x, y);
+        	const components = [255 - dist, dist, coord_to_gradient(x, y) , 255]
+       		set(x, y, components);
+		}
+    }
+	updatePixels();
+}
+
+const coord_to_gradient = (x, y) => ((x + y) / (width + height)) * 256;
+function dist_to_gradient(x, y) {
+	let dx = Math.abs(x - width / 2);
+    let dy = Math.abs(y - height / 2);
+    return Math.sqrt(dx*dx+dy*dy);
+}
+</script>

@@ -1,0 +1,44 @@
+<script src="//cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/p5.js"></script>
+<script>
+
+function setup() {
+	createCanvas(800,600);
+	noLoop();
+}
+
+function draw() {  //noprotect
+	const ITERATIONS = 30000;
+    const [ax, ay] = [400, 100];
+    const [bx, by] = [150, 500];
+    const [cx, cy] = [650, 500];
+    
+    let dx = ax, dy = ay;
+   
+    background(0);
+	set(ax, ay, 255);
+    set(bx, by, 255);
+    set(cx, cy, 255);
+    
+    for (let i = 0; i < 6 * ITERATIONS; ++i) {
+    	const rnd = floor(random(0, 3));
+    	switch (rnd) {
+        	case 0:
+            	dx = floor((dx + ax) / 2);
+                dy = floor((dy + ay) / 2);
+            	break;
+            case 1:
+        		dx = floor((dx + bx) / 2);
+                dy = floor((dy + by) / 2);
+            	break;
+            case 2:
+        		dx = floor((dx + cx) / 2);
+                dy = floor((dy + cy) / 2);
+            	break;
+        }
+        set(dx, dy, 255)
+	}
+    
+	updatePixels();
+}
+
+</script>

@@ -1,0 +1,44 @@
+<script src="//cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/p5.js"></script>
+<script>
+
+function setup() {
+	createCanvas(800,600);
+	noLoop();
+}
+
+function draw() {  //noprotect
+	background([200, 200, 255, 255]);
+    
+    const grass_line = 400;
+    // grass
+    for (let y = height - 1; y >= grass_line; --y) {
+    	for (let x = 0; x < width; ++x) {
+        	set(x, y, [0, 100, 0, 255])
+        }
+    }
+    // flowers
+    for (let i = 0; i < 1000; ++i) {
+    	const x = floor(random(0, width)), y = floor(random(0, height - grass_line));
+        const r = floor(random(0, 256)), g = floor(random(0, 256)), b = floor(random(0, 256));
+        set(x, y + grass_line, [r, g, b, 255]);
+    }
+    // walls
+    const wall_line = 200;
+    for (let y = wall_line; y < grass_line; ++y) {
+    	const walls_begin = width / 4;
+        const walls_end = width * 3 / 4;
+    	for (let x = walls_begin; x < walls_end; ++x) {
+        	set(x, y, [100, 50, 30, 255])
+        }
+    }
+    // roof 
+    for(let y=50, w = 0; y < wall_line; y++, w +=2) {
+    	for (let x = width / 2 - w; x <= width / 2 + w; ++x) {
+        	set(x, y, [255, 100, 100, 255]);
+        }
+    }
+
+	updatePixels();
+}
+
+</script>
