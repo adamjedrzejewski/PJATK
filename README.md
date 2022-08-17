@@ -1,6 +1,6 @@
 # PJATK
 
-# Subjects
+# Courses
 - GRK - Computer Graphics - Fall 2021
 - BYT - Software Engineering - Fall 2021
 - ISS - Intelligent Control Systems - Fall 2021
