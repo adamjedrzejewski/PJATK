@@ -6,3 +6,6 @@
 - ISS - Intelligent Control Systems - Fall 2021
 - PUM - Basis of Machine Learning - Spring 2022
 - WMA - Machine Vision - Spring 2022
+
+# TODO
+- add MAS after Fall 2022
