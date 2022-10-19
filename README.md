@@ -8,4 +8,7 @@
 - WMA - Machine Vision - Spring 2022
 
 # TODO
-- add MAS after Fall 2022
+- MAS - add after Fall 2022
+- SUML - add after Fall 2022
+- ASI - add after Fall 2022
+- ICK - add after Fall 2022
