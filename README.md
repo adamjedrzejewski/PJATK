@@ -1,4 +1,4 @@
-# PJATK
+# PJATK 🤮
 
 # Courses
 - GRK - Computer Graphics - Fall 2021
