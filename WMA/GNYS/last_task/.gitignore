@@ -1,1 +1,4 @@
 pokemons/**
+pokemons-back/**
+*.pb
+*.h5
